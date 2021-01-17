@@ -1,0 +1,167 @@
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cd lorem
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem (master)
+$ ls
+at.txt  at.txte  lorem.txt  sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem (master)
+$ cp lorem/sed.txt lorem-copy/sed.txt
+cp: cannot stat 'lorem/sed.txt': No such file or directory
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem (master)
+$ cd ..
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cp lorem/sed.txt lorem-copy/sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cd lorem-copy
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ ls
+dummy_file.txt  lorem/  sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ cd ..
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cp lorem/sed.txt lorem-copy/sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cp lorem/at.txt lorem-copy/at.txt, cp lorem/lorem.txt lorem-copy/lorem.txt
+cp: target 'lorem-copy/lorem.txt' is not a directory
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cp lorem/at.txt lorem-copy/at.txt; cp lorem/lorem.txt lorem-copy/lorem.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cd lorem-copy
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ ls
+at.txt  dummy_file.txt  lorem/  lorem.txt  sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ cd ..
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ head -3 lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ tail 3 lorem-copy/sed.txt
+tail: cannot open '3' for reading: No such file or directory
+==> lorem-copy/sed.txt <==
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ head 3 lorem-copy/sed.txt
+head: cannot open '3' for reading: No such file or directory
+==> lorem-copy/sed.txt <==
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ head -3 lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ tail -3 lorem-copy/sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash (master)
+$ cd lorem-copy
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ ls
+at.txt  dummy_file.txt  lorem/  lorem.txt  sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ echo "Homo homini lupus" >> sed.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ tail -3 sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ sed -i -r "s/et/ET/" at.txt
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ cat at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ name = Mubarik
+bash: name: command not found
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ name = "Mubarik"
+bash: name: command not found
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ read Name
+Mubarik
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ echo name
+name
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ echo $name
+python2.7
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   lorem/at.txt
+        new file:   lorem/at.txte
+        new file:   lorem/lorem.txt
+        new file:   lorem/sed.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        at.txt
+        lorem.txt
+        sed.txt
+
+
+mubar@DESKTOP-D2VKUVD MINGW64 ~/Desktop/Git Demo/lab-bash/lorem-copy (master)
+$ 
+
