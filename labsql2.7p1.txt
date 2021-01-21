@@ -1,2 +1,10 @@
 SELECT * FROM sakila.films_2020;
 UPDATE sakila.films_2020 SET rental_duration = 3, rental_rate = 2.99, replacement_cost = 8.99 where language_id = 1;
+select last_name, count(*) AS "Last Name Not repeated" from sakila.actor group by last_name having count(*)=1;
+select last_name, count(*) AS "Last Name Not repeated" from sakila.actor group by last_name having count(*)>1;
+select staff_id, count(*) from sakila.rental group by staff_id;
+select release_year count(*) as 'number of films' from sakila.film group by release_year order by release_year;
+select rating, avg(length) as 'Average duration' from sakila.film group by rating order by avg_duration desc;
+select rating, round(avg(length),2) as 'av_duration' from sakila.film group by rating having avg_duration > 120 order by avg_duration desc
+
+

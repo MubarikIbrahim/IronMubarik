@@ -1,0 +1,11 @@
+1. SELECT * FROM sakila.film;
+2. select distinct release_year from sakila.film;
+3. Select * From sakila.film where title like 'ARMAGEDDON%'; 
+4. select * from sakila.film where title like '%APOLLO' ;
+5. select * from sakila.film order by length desc limit 10;
+6. select count() from sakila.film where special_features like '%Behind the scenes%';
+7. alter table sakila.staff drop column picture;
+8. select staff_id from sakila.staff where first_name = 'Mike' and last_name = 'Hillyer';
+	select * from sakila.customer where first_name = 'Tammy' and last_name = 'Sanders';
+        select inventory_id from sakila.inventory
+         where film_id = 1;
