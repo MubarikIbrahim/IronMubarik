@@ -1,0 +1,2 @@
+SELECT * FROM sakila.films_2020;
+UPDATE sakila.films_2020 SET rental_duration = 3, rental_rate = 2.99, replacement_cost = 8.99 where language_id = 1;

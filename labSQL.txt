@@ -1,0 +1,7 @@
+1. SELECT * FROM sakila.actor;
+2. select * from sakila.actor where first_name ='Scarlett';
+3. select max(length) as 'max_duration', min(length) as 'min_duration' from sakila.film; 
+4. select avg(length/60) as 'Average Duration, Hours', avg(length) as Minutes from sakila.film;
+5. select  count(distinct(sakila.last_name)) from sakila.actors;
+6. select count(distinct last_name) from sakila.actor;
+7. select datediff(max(rental_date), min(rental_date)) as active_days from sakila.rental;
